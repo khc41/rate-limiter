@@ -1,11 +1,11 @@
-package study.latelimiter
+package study.ratelimiter
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class LatelimiterApplication
+class RatelimiterApplication
 
 fun main(args: Array<String>) {
-    runApplication<LatelimiterApplication>(*args)
+    runApplication<RatelimiterApplication>(*args)
 }

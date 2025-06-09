@@ -1,10 +1,10 @@
-package study.latelimiter
+package study.ratelimiter
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class LatelimiterApplicationTests {
+class RatelimiterApplicationTests {
 
     @Test
     fun contextLoads() {
