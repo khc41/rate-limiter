@@ -46,22 +46,22 @@ docker run -d -p 6379:6379 redis:alpine
 
 ### 3. API 테스트
 
-#### 토큰 버킷 테스트 (5개 요청/60초)
+#### 토큰 버킷 테스트 (5개 요청/30초)
 ```bash
 curl http://localhost:8080/api/test/token-bucket
 ```
 
-#### 고정 윈도우 테스트 (3개 요청/30초)
+#### 고정 윈도우 테스트 (3개 요청/15초)
 ```bash
 curl http://localhost:8080/api/test/fixed-window
 ```
 
-#### 슬라이딩 윈도우 테스트 (4개 요청/45초)
+#### 슬라이딩 윈도우 테스트 (4개 요청/20초)
 ```bash
 curl http://localhost:8080/api/test/sliding-window
 ```
 
-#### 커스텀 키 테스트 (2개 요청/60초)
+#### 커스텀 키 테스트 (2개 요청/30초)
 ```bash
 curl http://localhost:8080/api/test/custom-key
 ```

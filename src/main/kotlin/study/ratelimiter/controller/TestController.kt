@@ -10,7 +10,7 @@ import java.time.LocalDateTime
 class TestController {
 
     @GetMapping("/token-bucket")
-    @RateLimit(type = RateLimiterType.TOKEN_BUCKET, limit = 5, windowSeconds = 60)
+    @RateLimit(type = RateLimiterType.TOKEN_BUCKET, limit = 5, windowSeconds = 30)
     fun testTokenBucket(): Map<String, Any> {
         return mapOf(
             "message" to "Token Bucket Rate Limiter Test",
@@ -20,7 +20,7 @@ class TestController {
     }
 
     @GetMapping("/fixed-window")
-    @RateLimit(type = RateLimiterType.FIXED_WINDOW, limit = 3, windowSeconds = 30)
+    @RateLimit(type = RateLimiterType.FIXED_WINDOW, limit = 3, windowSeconds = 15)
     fun testFixedWindow(): Map<String, Any> {
         return mapOf(
             "message" to "Fixed Window Rate Limiter Test",
@@ -30,7 +30,7 @@ class TestController {
     }
 
     @GetMapping("/sliding-window")
-    @RateLimit(type = RateLimiterType.SLIDING_WINDOW, limit = 4, windowSeconds = 45)
+    @RateLimit(type = RateLimiterType.SLIDING_WINDOW, limit = 4, windowSeconds = 20)
     fun testSlidingWindow(): Map<String, Any> {
         return mapOf(
             "message" to "Sliding Window Rate Limiter Test",
@@ -40,7 +40,7 @@ class TestController {
     }
 
     @GetMapping("/custom-key")
-    @RateLimit(type = RateLimiterType.TOKEN_BUCKET, limit = 2, windowSeconds = 60, key = "custom-test-key")
+    @RateLimit(type = RateLimiterType.TOKEN_BUCKET, limit = 2, windowSeconds = 30, key = "custom-test-key")
     fun testCustomKey(): Map<String, Any> {
         return mapOf(
             "message" to "Custom Key Rate Limiter Test",
