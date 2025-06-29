@@ -105,7 +105,7 @@ curl http://localhost:8080/api/test/custom-key
 ### 독립 실행형 부하 테스트
 ```bash
 # 전체 부하 테스트 실행
-./gradlew bootRun --args="--spring.profiles.active=stress-test"
+./gradlew bootRun --args="--spr ing.profiles.active=stress-test"
 
 # 특정 알고리즘만 테스트
 ./gradlew bootRun --args="--spring.profiles.active=stress-test token-bucket"
